@@ -17,9 +17,7 @@ class Logger_Model
                     break;
                 case 1:
                     $retData['eredmény'] = "OK";
-                    $retData['uzenet'] = "Kedves " . $felhasznalo[0]['csaladi_nev'] . " " . $felhasznalo[0]['utonev'] . "!<br><br>
-					                      Jó munkát kívánunk rendszerünkkel.<br><br>
-										  Az üzemeltetők";
+                    $retData['uzenet'] = $felhasznalo[0]['csaladi_nev'] . " " . $felhasznalo[0]['utonev'];
                     $_SESSION['userid'] = $felhasznalo[0]['id'];
                     $_SESSION['userlastname'] = $felhasznalo[0]['csaladi_nev'];
                     $_SESSION['userfirstname'] = $felhasznalo[0]['utonev'];
