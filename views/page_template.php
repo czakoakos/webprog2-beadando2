@@ -21,7 +21,7 @@
                             <div class="logged-in-user">
                                 <span class="title">WebProg 2</span>
                                 <span class="username">
-                                    <?php if (isset($_SESSION['userlastname']) && !empty($_SESSION['blah'])) {
+                                    <?php if (isset($_SESSION['userlastname']) && !empty($_SESSION['userlastname'])) {
                                         echo $_SESSION['userlastname'] . " " . $_SESSION['userfirstname'];
                                     } else {
                                         echo 'Vendég';
