@@ -18,10 +18,10 @@ class Menu
     {
         $submenu = "";
 
-        $menu = "<ul>";
+        $menu = "<ul class='navbar-nav me-auto mb-2 mb-lg-0'>";
         foreach (self::$menu as $menuindex => $menuitem) {
             if ($menuitem[1] == "") {
-                $menu .= "<li><a href='" . SITE_ROOT . $menuindex . "' " . ($menuindex == $sItems[0] ? "class='selected'" : "") . ">" . $menuitem[0] . "</a></li>";
+                $menu .= "<li class='nav-item'><a class='nav-link' href='" . SITE_ROOT . $menuindex . "' " . ($menuindex == $sItems[0] ? "class='selected'" : "") . ">" . $menuitem[0] . "</a></li>";
             } else if ($menuitem[1] == $sItems[0]) {
                 $submenu .= "<li><a href='" . SITE_ROOT . $sItems[0] . "/" . $menuindex . "' " . ($menuindex == $sItems[1] ? "class='selected'" : "") . ">" . $menuitem[0] . "</a></li>";
             }

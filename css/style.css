@@ -1,3 +1,98 @@
+/* ----- ----- ----- ----- COLORS ----- ----- ----- -----  */
+/*
+    DARKER BG: #edc7b7
+    LIGHTER BG: #eee2dc
+    GREY: #bab2b5
+    BLUE: #123c69
+    RED: #ac3b61
+*/
+
 body {
-    background-color: #dddddd;
+    background: rgb(237,199,183);
+    background: linear-gradient(45deg, rgba(237,199,183,1) 0%, rgba(238,226,220,1) 100%);
+    font-weight: 200;
+}
+
+h1, h2, h3, h4{
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ac3b61;
+}
+
+a:hover {
+    color: #bab2b5;
+}
+
+.red-text{
+    color: #ac3b61;
+}
+.gray-text{
+    color: #ffffff;
+}
+.blue-text{
+    color: #123c69;
+}
+
+.black-shadow {
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+}
+
+.main-row {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* ----- ----- ----- ----- NAVIGATION ----- ----- ----- -----  */
+.navbar{
+    background: transparent;
+    padding: 20px 0;
+    /*border-bottom: 1px solid #699a74;*/
+}
+
+.navbar .logged-in-user {
+    position: relative;
+    text-align: center;
+    min-width: 100px;
+}
+
+.navbar .logged-in-user .title {
+    font-size: 10px;
+    color: #123c69;
+    display: block;
+}
+
+.navbar .logged-in-user .username {
+    font-weight: 500;
+    color: #123c69;
+    display: block;
+}
+
+.navbar .nav-item {
+    margin-right: 10px;
+}
+
+.navbar .nav-item a {
+    color: #ac3b61;
+}
+
+.navbar .nav-item a:hover {
+    color: #bab2b5;
+}
+
+.navbar .nav-item:last-child {
+    margin-left: auto;
+    background: #ac3b61;
+    border-radius: 5px;
+    margin-right: 0;
+}
+
+.navbar .nav-item:last-child a {
+    color: white;
 }
