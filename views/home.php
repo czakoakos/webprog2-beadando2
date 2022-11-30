@@ -10,7 +10,7 @@
             <h3 class="red-text">Üdvözlünk az oldalon:</h3>
             <p class="blue-text">
                 <strong>
-                    <?php if (isset($_SESSION['userlastname']) && !empty($_SESSION['blah'])) {
+                    <?php if (isset($_SESSION['userlastname']) && !empty($_SESSION['userlastname'])) {
                         echo $_SESSION['userlastname'] . " " . $_SESSION['userfirstname'];
                     } else {
                         echo 'Vendég';
