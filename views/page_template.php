@@ -18,7 +18,7 @@
                 <div class="row mx-0">
                     <div class="col-12">
                         <nav class="navbar navbar-expand-md">
-                            <div class="logged-in-user">
+                            <div class="logged-in-user text-start">
                                 <span class="title">WebProg 2</span>
                                 <span class="username">
                                     <?php if (isset($_SESSION['userlastname']) && !empty($_SESSION['userlastname'])) {
