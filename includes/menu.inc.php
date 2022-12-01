@@ -23,15 +23,12 @@ class Menu
             if ($menuitem[1] == "") {
                 $menu .= "<li class='nav-item'><a class='nav-link' href='" . SITE_ROOT . $menuindex . "' " . ($menuindex == $sItems[0] ? "class='selected'" : "") . ">" . $menuitem[0] . "</a></li>";
             } else if ($menuitem[1] == $sItems[0]) {
-                $submenu .= "<li><a href='" . SITE_ROOT . $sItems[0] . "/" . $menuindex . "' " . ($menuindex == $sItems[1] ? "class='selected'" : "") . ">" . $menuitem[0] . "</a></li>";
+                $menu .= "<li class='nav-item nav-item_" . $menuindex . "'><a class='nav-link' href='" . SITE_ROOT . $sItems[0] . "/" . $menuindex . "' " . ($menuindex == $sItems[1] ? "class='selected'" : "") . ">" . $menuitem[0] . "</a></li>";
             }
         }
         $menu .= "</ul>";
 
-        if ($submenu != "")
-            $submenu = "<ul>" . $submenu . "</ul>";
-
-        return $menu . $submenu;;
+        return $menu . $submenu;
     }
 }
 

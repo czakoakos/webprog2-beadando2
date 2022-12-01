@@ -56,10 +56,13 @@ a:hover {
     /*border-bottom: 1px solid #699a74;*/
 }
 
+.navbar .navbar-nav {
+    position: relative;
+}
+
 .navbar .logged-in-user {
     position: relative;
-    text-align: center;
-    min-width: 100px;
+    min-width: 120px;
 }
 
 .navbar .logged-in-user .title {
@@ -87,12 +90,56 @@ a:hover {
 }
 
 .navbar .nav-item:last-child {
-    margin-left: auto;
     background: #ac3b61;
     border-radius: 5px;
     margin-right: 0;
+    width: 100px;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .navbar .nav-item:last-child a {
     color: white;
 }
+
+.navbar .navbar-toggler {
+    color: rgba(0,0,0,.55);
+    border-color: rgba(0,0,0,.1);
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 575px) {
+
+}
+
+/* Small devices */
+@media only screen and (min-width: 576px) {}
+
+/* Medium devices */
+@media only screen and (min-width: 768px) {
+    .navbar .nav-item:last-child {
+        margin-left: auto;
+        margin-top: 0;
+    }
+
+    .navbar .nav-item_guests {
+        position: absolute;
+        left: 68px;
+        top: 30px;
+    }
+    .navbar .nav-item_arrivals {
+        position: absolute;
+        left: 68px;
+        top: 60px;
+    }
+}
+
+/* Large devices */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices */
+@media only screen and (min-width: 1200px) {}
