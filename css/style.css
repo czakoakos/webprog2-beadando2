@@ -56,9 +56,13 @@ a:hover {
     /*border-bottom: 1px solid #699a74;*/
 }
 
+.navbar .navbar-nav {
+    position: relative;
+}
+
 .navbar .logged-in-user {
     position: relative;
-    min-width: 100px;
+    min-width: 120px;
 }
 
 .navbar .logged-in-user .title {
@@ -120,6 +124,17 @@ a:hover {
     .navbar .nav-item:last-child {
         margin-left: auto;
         margin-top: 0;
+    }
+
+    .navbar .nav-item_guests {
+        position: absolute;
+        left: 68px;
+        top: 30px;
+    }
+    .navbar .nav-item_arrivals {
+        position: absolute;
+        left: 68px;
+        top: 60px;
     }
 }
 
