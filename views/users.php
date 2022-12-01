@@ -52,14 +52,68 @@ curl_close($ch);
 
 ?>
 
-    <form method="post">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 text-start py-4">
+            <h1 class="red-text mb-3">Módosítás / Beszúrás</h1>
+            <p class="blue-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate sem ut nunc
+                dictum, non commodo sem bibendum. Morbi in accumsan leo, porttitor varius risus.
+                Aenean dignissim rhoncus erat a aliquet. </p>
+            <form method="post" class="mb-5">
+                <div class="row mb-2">
+                    <div class="col-2 align-self-center">
+                        <label for="id">Id:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="id" id="id">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-2 align-self-center">
+                        <label for="csn">Családi név:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="csn" maxlength="45" id="csn">
+                    </div>
+                    <div class="col-2 align-self-center">
+                        <label for="un">Utónév:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="un" maxlength="45" id="un">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-2 align-self-center">
+                        <label for="bn">Felhasználónév:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="bn" maxlength="12" id="bn">
+                    </div>
+                    <div class="col-2 align-self-center">
+                        <label for="jel">Jelszó:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="jel" id="jel">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <input type="submit" value = "Módosít / hozzáad">
+                    </div>
+                </div>
 
-        Id: <input type="text" name="id"><br><br>
-        Családi név: <input type="text" name="csn" maxlength="45"> Utónév: <input type="text" name="un"
-                                                                                  maxlength="45"><br><br>
-        Bejelentkezési név: <input type="text" name="bn" maxlength="12"> Jelszó: <input type="text" name="jel"><br><br>
+                <!--                Id: <input type="text" name="id"><br><br>-->
+                <!--                Családi név: <input type="text" name="csn" maxlength="45"> Utónév: <input type="text" name="un" maxlength="45"><br><br>-->
+                <!--                Bejelentkezési név: <input type="text" name="bn" maxlength="12"> Jelszó: <input type="text" name="jel"><br><br>-->
 
-    </form>
-    <h3>Felhasználók:</h3>
-<?= $result ?>
-<?= $tabla ?>
+            </form>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="red-text mb-3">Felhasználók:</h3>
+                    <?= $result ?>
+                    <?= $tabla ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

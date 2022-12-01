@@ -8,14 +8,14 @@ try {
     $connection->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
     switch ($_SERVER['REQUEST_METHOD']) {
         case "GET":
-            $sql = "SELECT * FROM felhasznalok";
+            $sql = "SELECT * FROM felhasznalok ORDER BY id";
             $sth = $connection->query($sql);
-            $result .= "<table><thead><tr><th>@</th><th>Családi név:</th><th>Utónév:</th><th>Login név:</th><th>Jogosultság:</th></tr></thead>";
+            $result .= "<table class='table'><thead><tr><th>@</th><th>Családi név:</th><th>Utónév:</th><th>Login név:</th><th>Jogosultság:</th></tr></thead>";
             while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
                 $result .= "<tr>";
                 foreach ($row as $key => $column)
                     if($key != 'jelszo'){
-                        $result .= "<td>" . $column . "</td>";
+                        $result .= "<td style='border-color: #bab2b5'>" . $column . "</td>";
                     }
                 $result .= "</tr>";
             }
