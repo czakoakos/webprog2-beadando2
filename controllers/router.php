@@ -9,7 +9,7 @@ if (!isset($_SESSION['userlevel'])) $_SESSION['userlevel'] = "1__";
 include(SERVER_ROOT . 'includes/database.inc.php');
 include(SERVER_ROOT . 'includes/menu.inc.php');
 
-$page = "nyitolap";
+$page = "home";
 $subpage = "";
 $vars = array();
 
