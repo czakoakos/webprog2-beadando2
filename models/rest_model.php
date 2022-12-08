@@ -1,10 +1,13 @@
 <?php
-$result = [];
+$resultGet = [];
+$resultPost = [];
+$resultPut = [];
+$resultDelete = [];
 if ('post' === strtolower($_SERVER['REQUEST_METHOD'])) {
 
     switch ($_POST['type']) {
         case 'get':
-            $result = file_get_contents('https://dummy.restapiexample.com/api/v1/employees');
+            $resultGet = file_get_contents('https://dummy.restapiexample.com/api/v1/employees');
 
             // Ez csak akkor kell ha 1 darab employee-t akarunk lekérdezni
             //if ($_POST['employeeId'] === '0') {
@@ -12,7 +15,6 @@ if ('post' === strtolower($_SERVER['REQUEST_METHOD'])) {
             //} else {
             //    $result = file_get_contents('https://dummy.restapiexample.com/api/v1/employee/' . $_POST['employeeId']);
             //}
-            echo "Ez most itt egy GET method";
             break;
         case 'post':
             $data = (object)['name' => $_POST['name'], 'salary' => $_POST['salary'], 'age' => $_POST['age']];
@@ -24,8 +26,7 @@ if ('post' === strtolower($_SERVER['REQUEST_METHOD'])) {
                 )
             );
             $context = stream_context_create($options);
-            $result = file_get_contents('https://dummy.restapiexample.com/api/v1/create', false, $context);
-            echo "Ez most egy POST method";
+            $resultPost = file_get_contents('https://dummy.restapiexample.com/api/v1/create', false, $context);
             break;
         case 'delete':
             $data = $_POST['deletedEmployeeId'];
@@ -36,8 +37,7 @@ if ('post' === strtolower($_SERVER['REQUEST_METHOD'])) {
                 )
             );
             $context = stream_context_create($options);
-            $result = file_get_contents('https://dummy.restapiexample.com/api/v1/delete/' . $_POST['deletedEmployeeId'], false, $context);
-            echo "Ez most itt egy DELETE method";
+            $resultDelete = file_get_contents('https://dummy.restapiexample.com/api/v1/delete/' . $_POST['deletedEmployeeId'], false, $context);
             break;
         case 'put':
             $data = (object)['id' => $_POST['updateId'], 'name' => $_POST['updateName'], 'salary' => $_POST['updateSalary'], 'age' => $_POST['updateAge']];
@@ -49,8 +49,7 @@ if ('post' === strtolower($_SERVER['REQUEST_METHOD'])) {
                 )
             );
             $context = stream_context_create($options);
-            $result = file_get_contents('https://dummy.restapiexample.com/api/v1/update/'. $_POST['updateId'], false, $context);
-            echo "Ez most egy POST method";
+            $resultPut = file_get_contents('https://dummy.restapiexample.com/api/v1/update/'. $_POST['updateId'], false, $context);
             break;
         default:
             $result = file_get_contents('https://dummy.restapiexample.com/api/v1/employees');
