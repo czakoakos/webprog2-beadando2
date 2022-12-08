@@ -1,0 +1,58 @@
+.restapi {
+    position: relative;
+}
+
+.restapi .nav-pills .nav-item .nav-link.active,
+.restapi .nav-pills .nav-item .nav-link {
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-weight: 200;
+    margin-right: 10px;
+}
+
+.restapi .nav-pills .nav-item .nav-link {
+    background: transparent;
+    color: #ac3b61;
+}
+
+.restapi .nav-pills .nav-item .nav-link.active {
+    background: #ac3b61;
+    color: white;
+}
+
+.restapi .nav-pills .nav-item .nav-link:hover {
+    background: #ac3b61;
+    color: white;
+}
+
+form {
+    position: relative;
+}
+
+form input[type='text'],
+form input[type='number'],
+form input[type='password'] {
+    border: 1px solid #bab2b5;
+    border-radius: 5px;
+    padding: 5px 8px;
+    width: 100%;
+}
+
+form input[type='submit'] {
+    width: 100%;
+    background: #ac3b61;
+    border-radius: 5px;
+    margin-right: 0;
+    color: white;
+    border: none;
+    padding: 8px;
+    font-weight: 200;
+}
+
+.table {
+    color: #123c69;
+}
+.table thead {
+    color: #ac3b61;
+}
